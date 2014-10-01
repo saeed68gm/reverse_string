@@ -184,9 +184,22 @@ public:
 		unit_test_slashes();
 		unit_test_empty_string();
 		unit_test_long_string();
-		percentage=(passed/counter)*100;
-		cout<<"success rate is: "<<percentage<<endl;
-		return percentage;
+		try
+		{
+			if (counter==0)
+			{
+				percentage=0;
+			}
+			else
+				percentage=(passed/counter)*100;
+			cout<<"success rate is: "<<percentage<<endl;
+			return percentage;
+		}
+		catch(exception& e)
+		{
+			cout<< "exception while calculating test results!"<<endl;
+		}
+
 	}
 };
 
