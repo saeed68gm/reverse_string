@@ -75,8 +75,9 @@ public:
 		}
 		else
 		{
-			return false;
+			
 			counter++;
+			return false;
 		}
 	}
 	bool unit_test_repeated()
@@ -91,8 +92,9 @@ public:
 		}
 		else
 		{
-			return false;
+			
 			counter++;
+			return false;
 		}	
 	}
 	bool unit_test_palindrome()
@@ -107,8 +109,9 @@ public:
 		}
 		else
 		{
-			return false;
+			
 			counter++;
+			return false;
 		}	
 	}
 	bool unit_test_numbers_and_symbols()
@@ -123,8 +126,9 @@ public:
 		}
 		else
 		{
-			return false;
+			
 			counter++;
+			return false;
 		}	
 	}
 	bool unit_test_slashes()
@@ -139,8 +143,9 @@ public:
 		}
 		else
 		{
-			return false;
+			
 			counter++;
+			return false;
 		}	
 	}
 	bool unit_test_empty_string()
@@ -155,8 +160,9 @@ public:
 		}
 		else
 		{
-			return false;
+			
 			counter++;
+			return false;
 		}	
 	}
 	bool unit_test_long_string()
@@ -171,8 +177,9 @@ public:
 		}
 		else
 		{
-			return false;
+			
 			counter++;
+			return false;
 		}	
 	}
 	double unit_test_all()
