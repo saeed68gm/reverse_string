@@ -6,68 +6,9 @@
 #include <string>
 using namespace std;
 
-
-
-//helper function to calculate the length
-//of a given string
-int strlength(char* string)
-{
-	int c=0;
-	while(*(string+c)!='\0')
-		c++;
-	return c;
-
-}
-//helper function to swap two characters
-//takes two input characters and swaps them
-void swap_chars(char& a, char& b)
-{
-	try
-	{
-		char temp;
-		temp=b;
-		b=a;
-		a=temp;
-		return;
-	}
-	catch (exception& e)
-	{
-		cout<<"exception thrown while swapping characters!"<<e.what()<<endl;
-	}
-
-}
-
 //the function to reverse the string
 //input: pointer to the input string to reverse
 //the string will be reversed in-place
-void reverse_string(char* input)
-{
-	if (input==NULL)
-	{
-		cout<<"input array is empty!"<<endl;
-		return;
-	}
-	try
-	{
-		char *first, *last;
-		first=input;
-		int length=strlength(input);
-		last=(input+length-1);
-		for(int i=0;i<(length/2);i++)
-		{
-			swap_chars(*first,*last);
-			first++;
-			last--;
-		}
-		return;
-	}
-	catch (exception& e)
-	{
-		cout<<"exception thrown!"<<e.what()<<endl;
-	}
-
-}
-//overload for processing strings
 void reverse_string(string input)
 {
 	if (input.empty())
@@ -236,24 +177,6 @@ public:
 			counter++;
 		}	
 	}
-	bool unit_test_char()
-	{
-		//counter=0;
-		reverse_string(char_array);
-		
-		if(strcmp(	char_array,"yarra rahc a si sihT"))
-		{
-			cout<<"char array test passed!"<<endl;
-			counter++;
-			passed++;
-			return true;
-		}
-		else
-		{
-			return false;
-			counter++;
-		}	
-	}
 	double unit_test_all()
 	{
 		unit_test_simple();
@@ -263,7 +186,6 @@ public:
 		unit_test_slashes();
 		unit_test_empty_string();
 		unit_test_long_string();
-		unit_test_char();
 		percentage=(passed/counter)*100;
 		cout<<"success rate is: "<<percentage<<endl;
 		return percentage;
