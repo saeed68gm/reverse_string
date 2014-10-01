@@ -46,7 +46,6 @@ private:
 	string with_slashes;
 	string long_string;
 	string empty_string;
-	char char_array[20];
 protected:
 	int counter;
 	int passed;
@@ -61,7 +60,6 @@ public:
 		with_slashes="hhh\\/\]]s";
 		empty_string="";
 		long_string="This project is aimed at visualizing data obtained from multiple surveillance cameras for the purpose of re-identification. ";
-		strcpy(char_array,"This is a char array");
 		counter=0;
 		passed=0;
 	}
